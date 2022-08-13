@@ -12,9 +12,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'kavv%io-(e6#5e294u-p3*)ymjp5m0n*ul781y^@uk*l33(nn('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['51.250.16.163', '127.0.0.1', 'localhost'] 
+ALLOWED_HOSTS = ['*'] 
 
 
 # Application definition
@@ -118,6 +118,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
